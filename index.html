@@ -1,63 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Privacy Policy — MetaBeast</title>
-  <style>
-    :root{--bg:#f7fafc;--card:#fff;--muted:#6b7280;--accent:#0f172a}
-    body{font-family:Inter,ui-sans-serif,system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--accent); margin:0;padding:40px}
-    .wrap{max-width:900px;margin:0 auto}
-    .card{background:var(--card);padding:32px;border-radius:12px;box-shadow:0 6px 24px rgba(15,23,42,0.06)}
-    h1{margin:0 0 8px;font-size:24px}
-    p.lead{margin:0 0 18px;color:var(--muted)}
-    h2{font-size:18px;margin-top:22px}
-    p{line-height:1.6;color:#111827}
-    ul{margin:8px 0 18px 20px}
-    .muted{color:var(--muted);font-size:13px}
-    .footer{margin-top:22px;border-top:1px solid #eef2f7;padding-top:12px;color:var(--muted);font-size:13px}
-    a{color:#0366d6}
-    code{background:#f1f5f9;padding:2px 6px;border-radius:6px;font-size:13px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — MetaBeast</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            color: #1a202c;
+            font-size: 2.2em;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #2d3748;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+        p, li {
+            font-size: 1.1em;
+            color: #4a5568;
+        }
+        .last-updated {
+            color: #718096;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+        strong {
+            color: #2d3748;
+        }
+        code {
+            background-color: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.95em;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card">
-      <h1>Privacy Policy — MetaBeast</h1>
-      <p class="lead">Last updated: August 9, 2025</p>
 
-      <p>MetaBeast is a browser extension designed to generate SEO-friendly titles and keyword lists for Adobe Stock uploads. This page explains what data (if any) MetaBeast collects and how it is used.</p>
+    <div class="container">
+        <h1>Privacy Policy — MetaBeast</h1>
+        <p class="last-updated">Last updated: September 1, 2024</p>
 
-      <h2>Summary</h2>
-      <p>MetaBeast does <strong>not</strong> collect, store, or share personal information such as names, email addresses, IP addresses, or other identifying details. The extension only verifies a non-personal access key to control feature access and subscription status.</p>
+        <p>MetaBeast is a browser extension designed to generate SEO-friendly titles and keyword lists for Adobe Stock uploads. This page explains what data (if any) MetaBeast handles and how it is used.</p>
 
-      <h2>Data collected</h2>
-      <p><strong>We do not collect personal data.</strong> The extension does not request or store user names, emails, locations, payment details, or other personally identifiable information.</p>
+        <h2>Summary</h2>
+        <p>MetaBeast does <strong>not</strong> collect, store, or share personal information such as names, email addresses, or IP addresses. The extension's functionality relies on two types of credentials handled securely: a one-time access key for activation and user-provided Gemini API keys for AI processing.</p>
 
-      <h2>Access key verification</h2>
-      <p>To enable access control (for example, trial or paid access), MetaBeast sends a non-personal <em>access key</em> to a secure Supabase endpoint to validate whether the key is active. Supabase is used only to store and evaluate the access key status. No personal identifiers are stored or associated with the access key in our system.</p>
+        <h2>Data Handled by the Extension</h2>
+        <p>We do not collect personal data. The extension does not request or store usernames, emails, or other personally identifiable information. The data it handles is limited to:</p>
+        <ol>
+            <li><strong>Access Key:</strong> A non-personal, one-time key used to activate the extension.</li>
+            <li><strong>Gemini API Keys:</strong> User-provided API keys required to communicate with Google's Gemini AI.</li>
+        </ol>
 
-      <h2>AI processing requests</h2>
-      <p>When you request title or keyword generation, the extension sends the minimal required input (for example: image metadata or a text description) to an external AI processing endpoint over HTTPS. These requests are performed solely to generate the requested metadata and are not stored on our servers by default. If any third-party AI provider logs requests according to their policies, that behavior is governed by the provider's own privacy policies.</p>
+        <h2>Access Key Verification</h2>
+        <p>To enable access, MetaBeast sends a non-personal access key to a secure Supabase endpoint to validate the key. Supabase is used only to evaluate the access key status. No personal identifiers are stored or associated with the access key in our system.</p>
 
-      <h2>Data storage & retention</h2>
-      <p>MetaBeast itself does not store user-generated content or personal information on our servers. The Supabase backend is used only for access-key validation and does not store personal user profiles. Any temporary logs for debugging are retained for a minimal time and removed regularly.</p>
+        <h2>User-Provided Gemini API Keys</h2>
+        <p>MetaBeast requires users to add their own Google Gemini API keys to function.</p>
+        <ul>
+            <li><strong>Storage:</strong> These API keys are stored <strong>only on the user's local computer</strong> using the secure <code>chrome.storage.local</code> API.</li>
+            <li><strong>Transmission:</strong> The keys are sent over a secure HTTPS connection to our server-side function, which then uses them to make requests to the Google Gemini API on the user's behalf.</li>
+            <li><strong>Privacy:</strong> We <strong>never</strong> log, store, or collect user API keys on our servers. Their handling is temporary and only for the purpose of fulfilling the AI generation request.</li>
+        </ul>
 
-      <h2>Third-party services</h2>
-      <p>MetaBeast may use third-party services for access validation and AI processing (for example, Supabase and an AI provider). We do not share or sell user data to third parties for advertising or other unrelated purposes.</p>
+        <h2>AI Processing Requests</h2>
+        <p>When you request a title or keyword, the extension sends the image data and a user-provided API key to our secure Supabase Edge Function. This function then makes a request to the Google Gemini API. This process is governed by Google's own API and privacy policies.</p>
 
-      <h2>Cookies and tracking</h2>
-      <p>MetaBeast does not use tracking cookies or analytics for user identification. The extension may use local browser storage (via the <code>storage</code> permission) to save non-personal preferences like keyword-count or UI settings.</p>
+        <h2>Third-Party Services</h2>
+        <p>MetaBeast uses Supabase for access validation and our server-side functions. The core AI processing is done by Google's Gemini API. We do not share or sell user data with any other third parties.</p>
 
-      <h2>Security</h2>
-      <p>All network requests to external services use HTTPS to protect data in transit. API keys and secrets are never embedded directly into the extension; server-side protection is used where required.</p>
-
-      <h2>Contact</h2>
-      <p>If you have questions about this privacy policy or want to request information, please contact: <strong>aqilafirdous511@gmail.com
-</strong></p>
-
-      <div class="footer">By publishing this page I certify that this disclosure reflects the most up-to-date content of the extension's privacy policy.</div>
+        <h2>Contact</h2>
+        <p>If you have questions about this privacy policy, please contact: <a href="mailto:aqilafirdous511@gmail.com">aqilafirdous511@gmail.com</a></p>
     </div>
-  </div>
+
 </body>
 </html>
